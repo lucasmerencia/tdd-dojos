@@ -11,15 +11,16 @@ module.exports = function(grunt) {
 
 		jasmine: {
 			default: {
+				src: 'app/**/*.js',
 				options: {
-					specs: 'app/**/*Test.js',
+					specs: 'test/**/*Test.js',
 					summary: true
 				}
 			}
 		},
 
 		watch: {
-			files: ['Gruntfile.js', 'app/**/*.js'],
+			files: ['Gruntfile.js', 'app/**/*.js', 'test/**/*.js'],
 			tasks: ['jshint', 'jasmine']
 		}
 	});
